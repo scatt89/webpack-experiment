@@ -6,10 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
         app: './src/index.js',
-        toggle: './src/toggle.js',
     },
     module: {
         rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -31,7 +35,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-           title: 'Production',
+            template: path.join(__dirname, '/src/index.html')
         }),
     ],
     output: {
