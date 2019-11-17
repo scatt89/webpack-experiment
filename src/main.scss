@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'My-font';
+    src: url('./assets/fonts/OpenSans-Light.ttf') format('ttf'),
+         url('./assets/fonts/OpenSans-Bold.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.p {
+    background-color: forestgreen;
+    font-size: x-large;
+    font-family: 'My-font';
+}
+
+.button {
+    border-radius: 4px;
+    font-size: x-large;
+}
+
+body {
+    background: url('assets/img/wallpaper.jpg');
+}
